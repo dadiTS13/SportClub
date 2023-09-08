@@ -1,0 +1,113 @@
+body {
+    background-image: url(../img/backgroud.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*search bar */
+section {
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.40);
+    padding: 25px;
+    margin: 100px auto;
+    width: 480px;
+    margin-bottom: 170px;
+    position: relative;
+}
+
+.search-bar .text-search {
+    color: #797575;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 15px;
+    border: none;
+    width: 449px;
+    padding: 9px;
+}
+
+.search-bar .toggle-search {
+    position: absolute;
+    right: 15px;
+    color: #000;
+}
+
+.text-in-img {
+    position: absolute;
+    top: 6pc;
+    right: 15px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: rgba(230, 59, 96, 0.86);
+    width: 380px;
+}
+
+/*food sectio*/
+
+.food-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.food-section .food {
+    width: 350px;
+    height: 250px;
+    margin: 100px;
+    position: relative;
+
+
+}
+
+.food-section .food:hover {
+    height: 260px;
+    top: -5px;
+}
+
+.food-section .food1 {
+    background-image: url(../img/food1.png);
+}
+
+.food-section .food2 {
+    background-image: url(../img/foor2.png);
+}
+
+.food-section .food .rect {
+    border: 2px solid red;
+    width: 250px;
+    height: 80px;
+    border-radius: 20px;
+    background: #fff;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.food-section .food .rect i {
+    color: #4B9898;
+    font-size: 24px;
+}
+
+.food-section .food .rect p {
+    font-size: 20px;
+}

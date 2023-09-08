@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/contact.jpg);
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    float: left;
+    margin-left: 70px;
+    margin-top: 80px;
+    padding: 20px;
+    padding-right: 40px;
+    position: relative;
+    /* Added for relative positioning */
+}
+
+.container::before {
+    content: '';
+    background-image: url(../img/contact.jpg);
+    filter: blur(10px);
+    /* Adjust the blur amount */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(0% 0%,
+            /* Top left */
+            100% 0%,
+            /* Top right */
+            100% 100%,
+            /* Bottom right */
+            30% 100%,
+            /* Bottom left */
+            0% 70%
+            /* Top left (to create a diagonal blur effect) */
+        );
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
+    margin-top: 15px;
+
+}
+
+.form-group {
+    /* Arrange labels and inputs in a column */
+    display: flex;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.DIV {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    width: 85%;
+}
+
+.DIV label {
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 85%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+
+}
+
+.form-group input[type="email"] {
+    margin-right: auto;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #534f4f;
+}
+
+.msg {}

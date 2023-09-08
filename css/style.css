@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* star slider */
+.slider {
+    width: 100%;
+    max-width: 100vw;
+    height: 95vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    top: -6.4pc;
+    z-index: -1;
+}
+
+.slider .list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img {
+    width: 1600px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.slider .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 400px;
+    }
+}
+
+/*end slider*/
+
+/*section start */
+section {
+    width: 80%;
+    margin-left: auto;
+    padding: 0 35px;
+    margin-right: auto;
+    min-height: 60vh;
+    margin-bottom: 150px;
+
+}
+
+/*start first slide*/
+.firs-slide {
+    height: 50vh;
+    margin-top: 50px;
+}
+
+section .title1 {
+    text-align: center;
+    margin-bottom: 120px;
+    color: #E63B60;
+    font-family: DM Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.wrapper {
+    top: -80px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -25px;
+    z-index: 2;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 242px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+.carousel .card img {
+    height: 60%;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    top: -15px;
+}
+
+.carousel .card h1 {
+    font-family: DM Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: -25px;
+    position: relative;
+}
+
+.carousel .card button {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    width: 115px;
+    padding: 5px;
+    background: rgba(230, 59, 96, 0.85);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/*end first slide */
+
+
+/* start second-slide */
+.second-slide {
+    height: 50vh;
+    margin-top: 50px;
+}
+
+.new-wrapper {
+    top: -80px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.new-section-wrapper .title1 {
+    text-align: center;
+    margin-bottom: 120px;
+    color: #E63B60;
+    font-family: DM Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.new-wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.new-wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.new-wrapper i:first-child {
+    left: -25px;
+    z-index: 2;
+}
+
+.new-wrapper i:last-child {
+    right: -22px;
+}
+
+.new-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.new-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.new-carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.new-carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.new-carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.new-carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-carousel .card {
+    scroll-snap-align: start;
+    height: 242px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+.new-carousel .card img {
+    height: 60%;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    top: -15px;
+}
+
+.new-carousel .card h1 {
+    font-family: DM Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: -25px;
+    position: relative;
+}
+
+.new-carousel .card button {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    width: 115px;
+    padding: 5px;
+    background: rgba(230, 59, 96, 0.85);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.new-carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.new-carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .new-wrapper .new-carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .new-wrapper .new-carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+
+.my-wrapper {
+    top: -80px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.my-wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.my-wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.my-wrapper i:first-child {
+    left: -25px;
+    z-index: 2;
+}
+
+.my-wrapper i:last-child {
+    right: -22px;
+}
+
+.my-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.my-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.my-carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.my-carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.my-carousel.dragging .my-card {
+    cursor: grab;
+    user-select: none;
+}
+
+.my-carousel :where(.my-card, .my-img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-carousel .my-card {
+    scroll-snap-align: start;
+    height: 242px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+.my-carousel .my-card img {
+    height: 60%;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    top: -15px;
+}
+
+.my-carousel .my-card h1 {
+    font-family: DM Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: -25px;
+    position: relative;
+
+}
+
+.my-carousel .my-card button {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    width: 115px;
+    padding: 5px;
+    background: rgba(230, 59, 96, 0.85);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .my-wrapper .my-carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .my-wrapper .my-carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/*end second slider*/
+
+/*start 3rd slider */
+
+.custom-third-slide {
+    height: 50vh;
+    margin-top: 50px;
+}
+
+/* Styles for the custom-wrapper within custom-third-slide */
+.custom-wrapper {
+    top: -80px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+/* Styles for the title within custom-third-slide */
+.custom-third-slide .custom-title1 {
+    text-align: center;
+    margin-bottom: 120px;
+    color: #E63B60;
+    font-family: DM Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Styles for the custom-left and custom-right navigation icons */
+.custom-wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+/* Styles for the active state of navigation icons */
+.custom-wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+/* Styles for the custom-left navigation icon */
+.custom-wrapper #custom-left {
+    left: -25px;
+    z-index: 2;
+}
+
+/* Styles for the custom-right navigation icon */
+.custom-wrapper #custom-right {
+    right: -22px;
+}
+
+/* Styles for the custom-carousel */
+.custom-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+/* Styles for the custom-scrollbar (removing it) */
+.custom-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styles for no transition */
+.custom-carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+/* Styles for dragging */
+.custom-carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+/* Styles for dragging the custom-card */
+.custom-carousel.dragging .custom-card {
+    cursor: grab;
+    user-select: none;
+}
+
+/* Styles for custom-card and custom-img */
+.custom-carousel :where(.custom-card, .custom-img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the custom-card */
+.custom-carousel .custom-card {
+    scroll-snap-align: start;
+    height: 242px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Styles for the image within the custom-card */
+.custom-carousel .custom-card img {
+    height: 60%;
+    width: 100%;
+    padding: 0 25px;
+    position: relative;
+    top: -15px;
+}
+
+/* Styles for the heading within the custom-card */
+.custom-carousel .custom-card h1 {
+    font-family: DM Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: -25px;
+    position: relative;
+}
+
+/* Styles for the button within the custom-card */
+.custom-carousel .custom-card button {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    width: 115px;
+    padding: 5px;
+    background: rgba(230, 59, 96, 0.85);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+/* Styles for responsive layout on screens with a max-width of 900px */
+@media screen and (max-width: 900px) {
+    .custom-third-slide .custom-carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+/* Styles for responsive layout on screens with a max-width of 600px */
+@media screen and (max-width: 600px) {
+    .custom-third-slide .custom-carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/*end 3rd slider */
